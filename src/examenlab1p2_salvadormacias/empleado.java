@@ -8,10 +8,13 @@ package examenlab1p2_salvadormacias;
  *
  * @author Apple
  */
+import java.util.Random;
+
 public class empleado extends persona {
 
     public String puesto;
     public String years_xp;
+    public String ID;
 
     public empleado() {
     }
@@ -72,6 +75,24 @@ public class empleado extends persona {
 
     public void mostrarInfo() {
 
+    }
+
+    public String getID() {
+        return ID;
+    }
+
+   
+
+    public void setID(String ID) {
+
+      
+        if (this.getDepartamento().equals("francisco morazan")) {
+            setID("01");
+
+        } else if (this.getDepartamento().equals("comayagua")) {
+
+        } else if (this.getDepartamento().equals("cortes")) {
+        }
     }
 
     @Override

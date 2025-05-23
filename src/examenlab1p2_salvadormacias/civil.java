@@ -8,9 +8,14 @@ package examenlab1p2_salvadormacias;
  *
  * @author Apple
  */
+
+import java.util.Random;
+
+
 public class civil extends persona {
 
     public String motivo_registro;
+    public String ID;
 
     public civil() {
     }
@@ -63,6 +68,14 @@ public class civil extends persona {
     public void mostrarInfo() {
 
     }
+      public String getID() {
+        return ID;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+    
 
     @Override
     public String toString() {

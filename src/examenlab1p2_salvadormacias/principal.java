@@ -5,6 +5,7 @@
 package examenlab1p2_salvadormacias;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -114,9 +115,19 @@ public class principal extends javax.swing.JFrame {
 
         boton_morstarTodos.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
         boton_morstarTodos.setText("Mostrar todos");
+        boton_morstarTodos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                boton_morstarTodosMouseClicked(evt);
+            }
+        });
 
         boton_buscarPorID.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
         boton_buscarPorID.setText("Buscar por ID");
+        boton_buscarPorID.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                boton_buscarPorIDMouseClicked(evt);
+            }
+        });
 
         boton_estadisticas.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
         boton_estadisticas.setText("Ver estadisticas");
@@ -275,7 +286,9 @@ public class principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void boton_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_registrarMouseClicked
-        jTextArea1.setText("negro");
+        // jTextArea1.setText("negro");
+
+        jTextArea1.setText("Registrado: \n\n " + lista.getLast().toString());
 
         String nombre = text_nombre.getText();
         String apellido = text_apellido.getText();
@@ -283,14 +296,21 @@ public class principal extends javax.swing.JFrame {
         String dep = text_departamento.getText();
         String puesto = text_puesto.getText();
         String experiencia = text_yearsXp.getText();
+        empleado emp = new empleado(puesto, experiencia, nombre, apellido, nacimiento, dep);
+        lista_empleados.add(emp);
+        lista.add(emp);
+
         String motivo_reg = text_motivoRegistro.getText();
-        lista_civiles.add(new civil(motivo_reg, nombre, apellido, nacimiento, dep));
-        lista_empleados.add(new empleado(puesto, experiencia, nombre, apellido, nacimiento, dep));
+        civil Civil_default = new civil(motivo_reg, nombre, apellido, nacimiento, dep);
+        lista_civiles.add(Civil_default);
+        lista.add(Civil_default);
 
-        jTextArea1.setText("Registrado: \n\n ");
-        jTextArea1.setText(lista_civiles.getLast().toString());
-        jTextArea1.setText(lista_empleados.getLast().toString());
-
+        // lista_civiles.add(new civil(motivo_reg, nombre, apellido, nacimiento, dep));
+        //lista_empleados.add(new empleado(puesto, experiencia, nombre, apellido, nacimiento, dep));
+        //lista.add(new civil(motivo_reg, nombre, apellido, nacimiento, dep));
+        //lista.add(new empleado(puesto, experiencia, nombre, apellido, nacimiento, dep));
+        //  jTextArea1.setText(lista_civiles.getLast().toString());
+        //jTextArea1.setText(lista_empleados.getLast().toString());
         // TODO add your handling code here:
     }//GEN-LAST:event_boton_registrarMouseClicked
 
@@ -314,11 +334,64 @@ public class principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_boton_estadisticasMouseClicked
 
+    private void boton_buscarPorIDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_buscarPorIDMouseClicked
+        text_BuscarID.getText();
+        jTextArea1.setText("azul");
+        for (int i = 0; i < lista_civiles.size(); i++) {
+            if (lista_civiles.get(i).getID().equals(text_BuscarID.getText())) {
+                jTextArea1.setText(lista.get(i).toString());
+            } else {
+                JOptionPane.showMessageDialog(this, "el id ingresado no existe en el sistema");
+
+            }
+
+        }
+
+        for (int i = 0; i < lista_empleados.size(); i++) {
+            if (lista_empleados.get(i).getID().equals(text_BuscarID.getText())) {
+                jTextArea1.setText(lista.get(i).toString());
+            } else {
+                JOptionPane.showMessageDialog(this, "el id ingresado no existe en el sistema");
+
+            }
+
+        }
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton_buscarPorIDMouseClicked
+
+    private void boton_morstarTodosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_morstarTodosMouseClicked
+        if (lista_civiles.isEmpty() && lista_empleados.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "no hay registros creados");
+        } else {
+            jTextArea1.setText("Registros: "
+                    + "\nCivil\n" + lista_civiles.toString()
+                    + "\nEmpleado\n" + lista_empleados.toString());
+        }
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton_morstarTodosMouseClicked
+
+    private static void lista_civiles() {
+        for (int i = 0; i < lista_civiles.size(); i++) {
+            lista_civiles.toString();
+        }
+
+    }
+
+    private static void lista_empleados() {
+        for (int i = 0; i < lista_empleados.size(); i++) {
+            lista_empleados.toString();
+        }
+
+    }
+
     /**
      * @param args the command line arguments
      */
     public void mostrarElementosEmpleado(boolean mostrar) {
 
+        limpiar_casillas();
         text_nombre.setVisible(mostrar);
         label_nombre.setVisible(mostrar);
         text_apellido.setVisible(mostrar);
@@ -344,6 +417,7 @@ public class principal extends javax.swing.JFrame {
 
     public void mostrarElementosCivil(boolean mostrar) {
 
+        limpiar_casillas();
         text_nombre.setVisible(mostrar);
         label_nombre.setVisible(mostrar);
         text_apellido.setVisible(mostrar);
@@ -367,6 +441,20 @@ public class principal extends javax.swing.JFrame {
 
     }
 
+    public void limpiar_casillas() {
+        text_apellido.setText("");
+        text_BuscarID.setText("");
+        text_departamento.setText("");
+        text_motivoRegistro.setText("");
+        text_nombre.setText("");
+        text_yearsXp.setText("");
+        text_puesto.setText("");
+        text_nacimiento.setText("");
+
+    }
+    
+    
+   
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -432,5 +520,6 @@ public class principal extends javax.swing.JFrame {
     public static ArrayList<civil> lista_civiles;
     public static ArrayList<empleado> lista_empleados;
     public static ArrayList lista;
+    public static ArrayList lista_id;
 
 }
