@@ -4,6 +4,8 @@
  */
 package examenlab1p2_salvadormacias;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Apple
@@ -15,6 +17,8 @@ public class principal extends javax.swing.JFrame {
      */
     public principal() {
         initComponents();
+        mostrarElementosEmpleado(false);
+        mostrarElementosCivil(false);
     }
 
     /**
@@ -30,29 +34,29 @@ public class principal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         boton_empleado = new javax.swing.JToggleButton();
         boton_civil = new javax.swing.JToggleButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        label_nombre = new javax.swing.JLabel();
+        label_apellido = new javax.swing.JLabel();
+        label_departamento = new javax.swing.JLabel();
+        label_nacimiento = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        label_puesto = new javax.swing.JLabel();
+        label_experiencia = new javax.swing.JLabel();
         text_departamento = new javax.swing.JTextField();
         text_apellido = new javax.swing.JTextField();
         text_nacimiento = new javax.swing.JTextField();
         text_nombre = new javax.swing.JTextField();
         text_puesto = new javax.swing.JTextField();
         text_motivoRegistro = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
+        label_motivoRegistro = new javax.swing.JLabel();
         text_yearsXp = new javax.swing.JTextField();
-        boton_empleado1 = new javax.swing.JToggleButton();
+        boton_registrar = new javax.swing.JToggleButton();
         boton_morstarTodos = new javax.swing.JToggleButton();
         boton_buscarPorID = new javax.swing.JToggleButton();
         boton_estadisticas = new javax.swing.JToggleButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         text_BuscarID = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
+        label_buscarID = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -62,36 +66,51 @@ public class principal extends javax.swing.JFrame {
 
         boton_empleado.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
         boton_empleado.setText("Empleado");
+        boton_empleado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                boton_empleadoMouseClicked(evt);
+            }
+        });
 
         boton_civil.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
         boton_civil.setText("Civil");
+        boton_civil.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                boton_civilMouseClicked(evt);
+            }
+        });
 
-        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
-        jLabel2.setText("Nombre: ");
+        label_nombre.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
+        label_nombre.setText("Nombre: ");
 
-        jLabel3.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
-        jLabel3.setText("Apellido:");
+        label_apellido.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
+        label_apellido.setText("Apellido:");
 
-        jLabel4.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
-        jLabel4.setText("Departamento(Francisco Morazan,Cortes,Comayagua)");
+        label_departamento.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
+        label_departamento.setText("Departamento(Francisco Morazan,Cortes,Comayagua)");
 
-        jLabel5.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
-        jLabel5.setText("Año de nacimiento: ");
+        label_nacimiento.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
+        label_nacimiento.setText("Año de nacimiento: ");
 
         jLabel6.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         jLabel6.setText("Seleccione el tipo a registrar: ");
 
-        jLabel7.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
-        jLabel7.setText("Puesto: ");
+        label_puesto.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
+        label_puesto.setText("Puesto: ");
 
-        jLabel8.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
-        jLabel8.setText("Años de experiencia: ");
+        label_experiencia.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
+        label_experiencia.setText("Años de experiencia: ");
 
-        jLabel9.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
-        jLabel9.setText("Motivo del registro: ");
+        label_motivoRegistro.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
+        label_motivoRegistro.setText("Motivo del registro: ");
 
-        boton_empleado1.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
-        boton_empleado1.setText("Registrar");
+        boton_registrar.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
+        boton_registrar.setText("Registrar");
+        boton_registrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                boton_registrarMouseClicked(evt);
+            }
+        });
 
         boton_morstarTodos.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
         boton_morstarTodos.setText("Mostrar todos");
@@ -106,8 +125,8 @@ public class principal extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jLabel10.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
-        jLabel10.setText("Buscar ID:");
+        label_buscarID.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
+        label_buscarID.setText("Buscar ID:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -127,31 +146,31 @@ public class principal extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel9)
+                                .addComponent(label_motivoRegistro)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(text_motivoRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel8)
+                                .addComponent(label_experiencia)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(text_yearsXp, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3)
+                                .addComponent(label_apellido)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(text_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
+                                .addComponent(label_nombre)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(text_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
+                                .addComponent(label_puesto)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(text_puesto, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel5)
+                                .addComponent(label_nacimiento)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(text_nacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel4)
+                                .addComponent(label_departamento)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 182, Short.MAX_VALUE)
                                 .addComponent(text_departamento, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(108, 108, 108))))
@@ -162,14 +181,14 @@ public class principal extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(boton_empleado1)
+                                .addComponent(boton_registrar)
                                 .addGap(56, 56, 56)
                                 .addComponent(boton_morstarTodos, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(46, 46, 46)
                                 .addComponent(boton_buscarPorID, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(22, 22, 22)
-                                .addComponent(jLabel10)
+                                .addComponent(label_buscarID)
                                 .addGap(40, 40, 40)
                                 .addComponent(text_BuscarID, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(28, 28, 28)
@@ -195,37 +214,37 @@ public class principal extends javax.swing.JFrame {
                         .addGap(67, 67, 67)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(text_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
+                            .addComponent(label_nombre))
                         .addGap(17, 17, 17)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
+                            .addComponent(label_apellido)
                             .addComponent(text_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(54, 54, 54))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(text_nacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel5)))
+                        .addComponent(label_nacimiento)))
                 .addGap(33, 33, 33)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
+                    .addComponent(label_departamento)
                     .addComponent(text_departamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_puesto, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(text_puesto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
+                    .addComponent(label_experiencia)
                     .addComponent(text_yearsXp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
+                    .addComponent(label_motivoRegistro)
                     .addComponent(text_motivoRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(boton_morstarTodos)
-                            .addComponent(boton_empleado1)))
+                            .addComponent(boton_registrar)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -234,7 +253,7 @@ public class principal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text_BuscarID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10))
+                    .addComponent(label_buscarID))
                 .addGap(10, 10, 10)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
                 .addContainerGap())
@@ -250,9 +269,69 @@ public class principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void boton_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_registrarMouseClicked
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton_registrarMouseClicked
+
+    private void boton_empleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_empleadoMouseClicked
+        mostrarElementosEmpleado(rootPaneCheckingEnabled);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton_empleadoMouseClicked
+
+    private void boton_civilMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_civilMouseClicked
+        mostrarElementosCivil(rootPaneCheckingEnabled);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton_civilMouseClicked
+
     /**
      * @param args the command line arguments
      */
+    public void mostrarElementosEmpleado(boolean mostrar) {
+        
+        text_nombre.setVisible(mostrar);
+        label_nombre.setVisible(mostrar);
+        text_apellido.setVisible(mostrar);
+        label_apellido.setVisible(mostrar);
+        text_nacimiento.setVisible(mostrar);
+        label_nacimiento.setVisible(mostrar);
+        text_departamento.setVisible(mostrar);
+        label_departamento.setVisible(mostrar);
+        text_puesto.setVisible(mostrar);
+        label_puesto.setVisible(mostrar);
+        text_yearsXp.setVisible(mostrar);
+        label_experiencia.setVisible(mostrar);
+        boton_registrar.setVisible(mostrar);
+        boton_morstarTodos.setVisible(mostrar);
+        boton_buscarPorID.setVisible(mostrar);
+        boton_estadisticas.setVisible(mostrar);
+        text_BuscarID.setVisible(mostrar);
+        label_buscarID.setVisible(mostrar);
+        
+    }
+    
+    public void mostrarElementosCivil(boolean mostrar) {
+        
+        text_nombre.setVisible(mostrar);
+        label_nombre.setVisible(mostrar);
+        text_apellido.setVisible(mostrar);
+        label_apellido.setVisible(mostrar);
+        text_nacimiento.setVisible(mostrar);
+        label_nacimiento.setVisible(mostrar);
+        text_departamento.setVisible(mostrar);
+        label_departamento.setVisible(mostrar);
+        text_motivoRegistro.setVisible(mostrar);
+        label_motivoRegistro.setVisible(mostrar);
+        boton_registrar.setVisible(mostrar);
+        boton_morstarTodos.setVisible(mostrar);
+        boton_buscarPorID.setVisible(mostrar);
+        boton_estadisticas.setVisible(mostrar);
+        text_BuscarID.setVisible(mostrar);
+        label_buscarID.setVisible(mostrar);
+        
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -289,22 +368,22 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JToggleButton boton_buscarPorID;
     private javax.swing.JToggleButton boton_civil;
     private javax.swing.JToggleButton boton_empleado;
-    private javax.swing.JToggleButton boton_empleado1;
     private javax.swing.JToggleButton boton_estadisticas;
     private javax.swing.JToggleButton boton_morstarTodos;
+    private javax.swing.JToggleButton boton_registrar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel label_apellido;
+    private javax.swing.JLabel label_buscarID;
+    private javax.swing.JLabel label_departamento;
+    private javax.swing.JLabel label_experiencia;
+    private javax.swing.JLabel label_motivoRegistro;
+    private javax.swing.JLabel label_nacimiento;
+    private javax.swing.JLabel label_nombre;
+    private javax.swing.JLabel label_puesto;
     private javax.swing.JTextField text_BuscarID;
     private javax.swing.JTextField text_apellido;
     private javax.swing.JTextField text_departamento;
@@ -314,4 +393,9 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JTextField text_puesto;
     private javax.swing.JTextField text_yearsXp;
     // End of variables declaration//GEN-END:variables
+
+    public static ArrayList<civil> lista_civiles;
+    public static ArrayList<empleado> lista_empleados;
+    public static ArrayList lista;
+    
 }

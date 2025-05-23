@@ -50,37 +50,37 @@
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_motivoRegistro" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="text_motivoRegistro" min="-2" pref="231" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_experiencia" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="text_yearsXp" min="-2" pref="231" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_apellido" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="text_apellido" min="-2" pref="231" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_nombre" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="text_nombre" min="-2" pref="231" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_puesto" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="text_puesto" min="-2" pref="231" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_nacimiento" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="text_nacimiento" min="-2" pref="231" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_departamento" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="182" max="32767" attributes="0"/>
                                   <Component id="text_departamento" min="-2" pref="231" max="-2" attributes="0"/>
                               </Group>
@@ -96,7 +96,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="boton_empleado1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="boton_registrar" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                                   <Component id="boton_morstarTodos" min="-2" pref="112" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
@@ -104,7 +104,7 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                                  <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_buscarID" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                   <Component id="text_BuscarID" min="-2" pref="231" max="-2" attributes="0"/>
                               </Group>
@@ -140,38 +140,38 @@
                           <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="text_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_apellido" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="text_apellido" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="text_nacimiento" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="label_nacimiento" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label_departamento" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="text_departamento" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel7" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="label_puesto" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                       <Component id="text_puesto" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label_experiencia" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="text_yearsXp" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label_motivoRegistro" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="text_motivoRegistro" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -179,7 +179,7 @@
                           <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="boton_morstarTodos" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="boton_empleado1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="boton_registrar" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -193,7 +193,7 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="text_BuscarID" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label_buscarID" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" pref="178" max="32767" attributes="0"/>
@@ -225,6 +225,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Empleado"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="boton_empleadoMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="boton_civil">
           <Properties>
@@ -233,8 +236,11 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Civil"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="boton_civilMouseClicked"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="label_nombre">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Helvetica Neue" size="12" style="1"/>
@@ -242,7 +248,7 @@
             <Property name="text" type="java.lang.String" value="Nombre: "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="label_apellido">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Helvetica Neue" size="12" style="1"/>
@@ -250,7 +256,7 @@
             <Property name="text" type="java.lang.String" value="Apellido:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="label_departamento">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Helvetica Neue" size="12" style="1"/>
@@ -258,7 +264,7 @@
             <Property name="text" type="java.lang.String" value="Departamento(Francisco Morazan,Cortes,Comayagua)"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="label_nacimiento">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Helvetica Neue" size="12" style="1"/>
@@ -274,7 +280,7 @@
             <Property name="text" type="java.lang.String" value="Seleccione el tipo a registrar: "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="label_puesto">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Helvetica Neue" size="12" style="1"/>
@@ -282,7 +288,7 @@
             <Property name="text" type="java.lang.String" value="Puesto: "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="label_experiencia">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Helvetica Neue" size="12" style="1"/>
@@ -302,7 +308,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="text_motivoRegistro">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="label_motivoRegistro">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Helvetica Neue" size="12" style="1"/>
@@ -312,13 +318,16 @@
         </Component>
         <Component class="javax.swing.JTextField" name="text_yearsXp">
         </Component>
-        <Component class="javax.swing.JToggleButton" name="boton_empleado1">
+        <Component class="javax.swing.JToggleButton" name="boton_registrar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Helvetica Neue" size="12" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Registrar"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="boton_registrarMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="boton_morstarTodos">
           <Properties>
@@ -361,7 +370,7 @@
         </Container>
         <Component class="javax.swing.JTextField" name="text_BuscarID">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel10">
+        <Component class="javax.swing.JLabel" name="label_buscarID">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Helvetica Neue" size="12" style="1"/>
