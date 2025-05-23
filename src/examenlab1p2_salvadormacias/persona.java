@@ -8,7 +8,7 @@ package examenlab1p2_salvadormacias;
  *
  * @author Apple
  */
-public class persona {
+abstract public class persona {
 
     public String nombre;
     public String apellido;
@@ -56,6 +56,8 @@ public class persona {
     public void setDepartamento(String departamento) {
         this.departamento = departamento;
     }
+
+    public abstract void mostrarInfo();
 
     @Override
     public String toString() {

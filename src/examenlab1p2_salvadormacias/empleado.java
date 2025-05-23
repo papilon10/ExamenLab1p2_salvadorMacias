@@ -70,6 +70,10 @@ public class empleado extends persona {
         this.departamento = departamento;
     }
 
+    public void mostrarInfo() {
+
+    }
+
     @Override
     public String toString() {
         return "empleado{" + "puesto=" + puesto + ", years_xp=" + years_xp + '}';

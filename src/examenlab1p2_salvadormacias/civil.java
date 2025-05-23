@@ -60,6 +60,10 @@ public class civil extends persona {
         this.departamento = departamento;
     }
 
+    public void mostrarInfo(){
+    
+    }
+    
     @Override
     public String toString() {
         return "civil{" + "motivo_registro=" + motivo_registro + '}';
