@@ -120,6 +120,11 @@ public class principal extends javax.swing.JFrame {
 
         boton_estadisticas.setFont(new java.awt.Font("Helvetica Neue", 1, 12)); // NOI18N
         boton_estadisticas.setText("Ver estadisticas");
+        boton_estadisticas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                boton_estadisticasMouseClicked(evt);
+            }
+        });
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -270,6 +275,21 @@ public class principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void boton_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_registrarMouseClicked
+        jTextArea1.setText("negro");
+
+        String nombre = text_nombre.getText();
+        String apellido = text_apellido.getText();
+        String nacimiento = text_nacimiento.getText();
+        String dep = text_departamento.getText();
+        String puesto = text_puesto.getText();
+        String experiencia = text_yearsXp.getText();
+        String motivo_reg = text_motivoRegistro.getText();
+        lista_civiles.add(new civil(motivo_reg, nombre, apellido, nacimiento, dep));
+        lista_empleados.add(new empleado(puesto, experiencia, nombre, apellido, nacimiento, dep));
+
+        jTextArea1.setText("Registrado: \n\n ");
+        jTextArea1.setText(lista_civiles.getLast().toString());
+        jTextArea1.setText(lista_empleados.getLast().toString());
 
         // TODO add your handling code here:
     }//GEN-LAST:event_boton_registrarMouseClicked
@@ -285,11 +305,20 @@ public class principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_boton_civilMouseClicked
 
+    private void boton_estadisticasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton_estadisticasMouseClicked
+        jTextArea1.setText("Estadisticas"
+                + "\nCiviviles: " + lista_civiles.size()
+                + "\nEmpleados: " + lista_empleados.size()
+        );
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton_estadisticasMouseClicked
+
     /**
      * @param args the command line arguments
      */
     public void mostrarElementosEmpleado(boolean mostrar) {
-        
+
         text_nombre.setVisible(mostrar);
         label_nombre.setVisible(mostrar);
         text_apellido.setVisible(mostrar);
@@ -308,11 +337,13 @@ public class principal extends javax.swing.JFrame {
         boton_estadisticas.setVisible(mostrar);
         text_BuscarID.setVisible(mostrar);
         label_buscarID.setVisible(mostrar);
-        
+        text_motivoRegistro.setVisible(false);
+        label_motivoRegistro.setVisible(false);
+
     }
-    
+
     public void mostrarElementosCivil(boolean mostrar) {
-        
+
         text_nombre.setVisible(mostrar);
         label_nombre.setVisible(mostrar);
         text_apellido.setVisible(mostrar);
@@ -329,9 +360,13 @@ public class principal extends javax.swing.JFrame {
         boton_estadisticas.setVisible(mostrar);
         text_BuscarID.setVisible(mostrar);
         label_buscarID.setVisible(mostrar);
-        
+        text_puesto.setVisible(false);
+        label_puesto.setVisible(false);
+        text_yearsXp.setVisible(false);
+        label_experiencia.setVisible(false);
+
     }
-    
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -397,5 +432,5 @@ public class principal extends javax.swing.JFrame {
     public static ArrayList<civil> lista_civiles;
     public static ArrayList<empleado> lista_empleados;
     public static ArrayList lista;
-    
+
 }

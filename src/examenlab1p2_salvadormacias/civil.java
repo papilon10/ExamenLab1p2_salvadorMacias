@@ -15,7 +15,7 @@ public class civil extends persona {
     public civil() {
     }
 
-    public civil(String motivo_registro, String nombre, String apellido, int birth_year, String departamento) {
+    public civil(String motivo_registro, String nombre, String apellido, String birth_year, String departamento) {
         super(nombre, apellido, birth_year, departamento);
         this.motivo_registro = motivo_registro;
     }
@@ -44,11 +44,11 @@ public class civil extends persona {
         this.apellido = apellido;
     }
 
-    public int getBirth_year() {
+    public String getBirth_year() {
         return birth_year;
     }
 
-    public void setBirth_year(int birth_year) {
+    public void setBirth_year(String birth_year) {
         this.birth_year = birth_year;
     }
 
@@ -60,13 +60,17 @@ public class civil extends persona {
         this.departamento = departamento;
     }
 
-    public void mostrarInfo(){
-    
+    public void mostrarInfo() {
+
     }
-    
+
     @Override
     public String toString() {
-        return "civil{" + "motivo_registro=" + motivo_registro + '}';
+        return "civil"
+                + "\nNombre: " + nombre
+                + "\nMotivo del registro : " + motivo_registro
+                + "\nDepartamento: " + departamento
+                + "\nID:";
     }
 
 }

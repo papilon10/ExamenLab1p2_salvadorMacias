@@ -12,13 +12,13 @@ abstract public class persona {
 
     public String nombre;
     public String apellido;
-    public int birth_year;
+    public String birth_year;
     public String departamento;
 
     public persona() {
     }
 
-    public persona(String nombre, String apellido, int birth_year, String departamento) {
+    public persona(String nombre, String apellido, String birth_year, String departamento) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.birth_year = birth_year;
@@ -41,11 +41,11 @@ abstract public class persona {
         this.apellido = apellido;
     }
 
-    public int getBirth_year() {
+    public String getBirth_year() {
         return birth_year;
     }
 
-    public void setBirth_year(int birth_year) {
+    public void setBirth_year(String birth_year) {
         this.birth_year = birth_year;
     }
 

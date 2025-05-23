@@ -16,7 +16,7 @@ public class empleado extends persona {
     public empleado() {
     }
 
-    public empleado(String puesto, String years_xp, String nombre, String apellido, int birth_year, String departamento) {
+    public empleado(String puesto, String years_xp, String nombre, String apellido, String birth_year, String departamento) {
         super(nombre, apellido, birth_year, departamento);
         this.puesto = puesto;
         this.years_xp = years_xp;
@@ -54,11 +54,11 @@ public class empleado extends persona {
         this.apellido = apellido;
     }
 
-    public int getBirth_year() {
+    public String getBirth_year() {
         return birth_year;
     }
 
-    public void setBirth_year(int birth_year) {
+    public void setBirth_year(String birth_year) {
         this.birth_year = birth_year;
     }
 
@@ -76,7 +76,12 @@ public class empleado extends persona {
 
     @Override
     public String toString() {
-        return "empleado{" + "puesto=" + puesto + ", years_xp=" + years_xp + '}';
+        return "Empleado"
+                + "\nNombre: " + nombre
+                + "\nPuesto: " + puesto
+                + "\nAños de experiencia: " + years_xp
+                + "\nDepartamento: " + departamento
+                + "\nID:";
     }
 
 }
